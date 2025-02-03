@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="music-player">
+        <img src="https://picsum.photos/300" class="album-art" alt="Album Art">
+        <div class="song-info">
+            <div class="song-title">Loading...</div>
+            <div class="artist">Artist</div>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress"></div>
+        </div>
+        
+        <div class="time">
+            <span class="current-time">0:00</span>
+            <span class="duration">0:00</span>
+        </div>
+
+        <div class="controls">
+            <button onclick="previousSong()">⏮</button>
+            <button onclick="togglePlay()" id="playBtn">▶</button>
+            <button onclick="nextSong()">⏭</button>
+        </div>
+
+        <div class="volume-container">
+            <span>🔊</span>
+            <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1" oninput="setVolume(this.value)">
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
